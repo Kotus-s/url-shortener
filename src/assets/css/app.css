@@ -17,7 +17,7 @@
 .card .card__title {
     position: relative;
     z-index: 1;
-    @apply ml-2 mb-6 text-xl text-white font-medium;
+    @apply ml-2 mb-8 text-xl text-white font-medium;
 }
 
 .card .card__title::after {
@@ -75,18 +75,17 @@
     transform: translateY(0);
 }
 
-.card .card__content .card__content--form {
+.card .card__content .card__content--input-group {
     @apply flex flex-col justify-end sm:flex-row;
 }
 
-.card .card__content .card__content--form input {
+.card .card__content .card__content--input-group input {
     @apply transition-all
     outline-none
     h-10
     text-white
     flex-grow
-    mb-2
-    sm:mr-2
+    mb-3
     bg-theme-dark-900
     block
     shadow-md
@@ -99,7 +98,7 @@
     focus:border-opacity-100;
 }
 
-.card .card__content .card__content--form button {
+.card .card__content .card__content--input-group button {
     @apply transition-all
     h-10
     outline-none
@@ -108,6 +107,7 @@
     bg-primary
     rounded-lg
     shadow-md
+    sm:ml-2
     hover:shadow-primary
     text-sm
     px-3;
@@ -125,4 +125,12 @@
 .slide-leave-to {
     transform: translateX(30px);
     opacity: 0;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s
+}
+
+.fade-enter-from, .fade-leave-to {
+    opacity: 0
 }

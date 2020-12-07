@@ -5,4 +5,6 @@ import router from './router/index'
 
 import './assets/css/app.css'
 
-createApp(App).use(router).mount('#app')
+const app = createApp(App)
+app.config.globalProperties.$emitter = require('tiny-emitter/instance')
+app.use(router).mount('#app')

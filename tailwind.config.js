@@ -6,24 +6,24 @@ module.exports = {
             fontFamily: {
                 'sans': ['Poppins'],
             },
-        },
-        colors: {
-            theme: {
-                dark: {
-                    1000: '#0f1013',
-                    900: '#141417',
-                    800: '#18191c',
-                    700: '#1e2023',
+            colors: {
+                theme: {
+                    dark: {
+                        1000: '#0f1013',
+                        900: '#141417',
+                        800: '#18191c',
+                        700: '#1e2023',
+                    },
                 },
+                white: '#fff',
+                primary: {
+                    light: '#71b1e7',
+                    DEFAULT: '#3490dc',
+                    dark: '#24659a'
+                },
+                secondary: '#ffed4a',
+                danger: '#e3342f'
             },
-            white: '#fff',
-            primary: {
-                light: '#71b1e7',
-                DEFAULT: '#3490dc',
-                dark: '#24659a'
-            },
-            secondary: '#ffed4a',
-            danger: '#e3342f',
         },
         boxShadow: {
             primary: '0 10px 20px -10px rgba(52, 144, 220, .7);',
