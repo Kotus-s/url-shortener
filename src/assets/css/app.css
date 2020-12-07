@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#app {
+    @apply min-h-screen flex flex-col justify-center bg-theme-dark-900 text-white;
+}
+
+.card {
+    @apply transition-all p-9 self-center w-10/12 sm:w-7/12 max-w-3xl mx-9 bg-theme-dark-700 shadow-xl rounded-lg;
+}
+
+.card:not(:first-child) {
+    @apply mt-6;
+}
+
+.card .card__title {
+    position: relative;
+    z-index: 1;
+    @apply ml-2 mb-6 text-xl text-white font-medium;
+}
+
+.card .card__title::after {
+    content: "";
+    border-radius: 3px;
+    position: absolute;
+    bottom: -7px;
+    left: -9px;
+    width: 21px;
+    height: 21px;
+    z-index: -1;
+    @apply bg-primary-light;
+}
+
+.card .card__title::before {
+    content: "";
+    border-radius: 3px;
+    position: absolute;
+    top: -8px;
+    left: 5px;
+    width: 18px;
+    height: 18px;
+    z-index: -1;
+    @apply bg-primary;
+}
+
+.card  .card__content {
+    @apply mt-5;
+}
+
+.card .card__content .card__content--url {
+    @apply flex justify-center;
+}
+
+.card .card__content .card__content--url a {
+    @apply text-2xl border-b-4 border-primary relative text-white z-10;
+}
+
+.card .card__content .card__content--url a:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition-duration: .25s;
+    top: 0;
+    opacity: 0;
+    transform: translateY(21px);
+    left: 0;
+    @apply bg-primary;
+}
+
+.card .card__content .card__content--url a:hover:before {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card .card__content .card__content--form {
+    @apply flex flex-col justify-end sm:flex-row;
+}
+
+.card .card__content .card__content--form input {
+    @apply transition-all
+    outline-none
+    h-10
+    text-white
+    flex-grow
+    mb-2
+    sm:mr-2
+    bg-theme-dark-900
+    block
+    shadow-md
+    rounded-lg
+    pl-3
+    border-b-2
+    border-primary
+    border-opacity-0
+    focus:bg-theme-dark-1000
+    focus:border-opacity-100;
+}
+
+.card .card__content .card__content--form button {
+    @apply transition-all
+    h-10
+    outline-none
+    transform
+    hover:-translate-y-1
+    bg-primary
+    rounded-lg
+    shadow-md
+    hover:shadow-primary
+    text-sm
+    px-3;
+}
+
+.slide-enter-active, .slide-leave-active {
+    transition: all .3s ease;
+    opacity: 1;
+}
+.slide-enter-from {
+    transform: translateX(-30px);
+    opacity: 0;
+}
+
+.slide-leave-to {
+    transform: translateX(30px);
+    opacity: 0;
+}
