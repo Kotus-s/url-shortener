@@ -13,7 +13,7 @@
   </div>
 
   <div class="card">
-    <div class="card__title">Generated Url 🪑</div>
+    <div class="card__title">Generated Url 😎</div>
     <div class="card__content">
       <div class="card__content--url">
         <a href="http://google.fr">Mon lien</a>
